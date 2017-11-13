@@ -1,3 +1,42 @@
-<h1>
-  {{title}}
-</h1>
+<nav class="navbar navbar-default">
+    <!--Container starts here-->
+    <div class="container-fluid">
+
+      <div class="collapse navbar-collapse">
+
+        <!-- header menu starts here -->
+        <ul class="nav navbar-nav">
+          <li class="home" routerLinkActive=" active"
+              [routerLinkActiveOptions]="{exact: true}">
+            <a routerLink="/"> SK </a>
+          </li>
+          <li routerLinkActive = "active">
+            <a routerLink="Angular"> Angular </a>
+          </li>
+          <li routerLinkActive = "active">
+             <a routerLink="Javascript"> Javascript </a>
+          </li>
+          <li routerLinkActive = "active">
+            <a routerLink="Css"> CSS </a>
+          </li>
+          <li routerLinkActive = "active">
+            <a routerLink="D3"> D3 JS </a>
+          </li>
+        </ul>
+        <!-- header menu ends here -->
+      </div>
+
+
+    </div>
+    <!--Container ends here-->
+  </nav>
+
+<div>
+  <router-outlet></router-outlet>      
+</div>
+
+
+
+
+
+

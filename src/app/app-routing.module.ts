@@ -1,11 +1,5 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
-
-import { AppComponent } from './app.component';
-import { AppRoutingModule } from './app-routing.module';
-
+import { Routes, RouterModule } from '@angular/router';
 import { AngularPageComponentComponent } from './angularpage/angular-page-component/angular-page-component.component';
 import { JavascriptPageComponentComponent } from './javascriptpage/javascript-page-component/javascript-page-component.component';
 import { CssPageComponentComponent } from './csspage/css-page-component/css-page-component.component';
@@ -17,30 +11,33 @@ import { TwoWayDataBindingComponent } from './angularpage/angular-page-component
 import { EventBindingComponent } from './angularpage/angular-page-component/event-binding/event-binding.component';
 import { DataBindingComponent } from './angularpage/angular-page-component/data-binding/data-binding.component';
 
+const appRoutes: Routes = [
+  { path: '', component: HomepageComponent },
+  {
+    path: 'Angular', component: AngularPageComponentComponent, children: [
+      { path: 'DataBinding', component: DataBindingComponent },
+      { path: 'StringInterpolation', component: StringInterpolationComponent },
+      { path: 'TwowayDataBinding', component: TwoWayDataBindingComponent },
+      { path: 'PropertyBinding', component: PropertyBindingComponent },
+      { path: 'EventBinding', component: EventBindingComponent }
+    ]
+  },
+  { path: 'Javascript', component: JavascriptPageComponentComponent },
+  { path: 'Css', component: CssPageComponentComponent },
+  { path: 'D3', component: D3PageComponentComponent },
+
+  
+];
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    AngularPageComponentComponent,
-    JavascriptPageComponentComponent,
-    CssPageComponentComponent,
-    D3PageComponentComponent,
-    HomepageComponent,
-    StringInterpolationComponent,
-    PropertyBindingComponent,
-    TwoWayDataBindingComponent,
-    EventBindingComponent,
-    DataBindingComponent
-
-  ],
   imports: [
-    BrowserModule,
-    FormsModule,
-    HttpModule,
-    AppRoutingModule
+    // RouterModule.forRoot(appRoutes, {useHash: true})
+    RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  exports: [RouterModule]
 })
-export class AppModule { }
+export class AppRoutingModule {
+
+}
+
 
