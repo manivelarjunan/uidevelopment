@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomepageComponent implements OnInit {
 
-  private LOGO = require("./images/png.jpg");
+   LOGO = require("./images/png.jpg");
 
   constructor() { }
 

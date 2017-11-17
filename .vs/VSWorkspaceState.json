@@ -3,14 +3,19 @@
     "",
     "\\src",
     "\\src\\app",
+    "\\src\\app\\angularpage",
     "\\src\\app\\angularpage\\angular-page-component",
+    "\\src\\app\\angularpage\\angular-page-component\\data-binding",
+    "\\src\\app\\csspage",
     "\\src\\app\\csspage\\css-page-component",
-    "\\src\\app\\d3page\\d3-page-component",
     "\\src\\app\\home",
     "\\src\\app\\home\\homepage",
-    "\\src\\app\\home\\homepage\\images",
+    "\\src\\app\\htmlpage",
+    "\\src\\app\\htmlpage\\html-component",
+    "\\src\\app\\htmlpage\\html-component\\doc-typepage",
+    "\\src\\app\\javascriptpage",
     "\\src\\app\\javascriptpage\\javascript-page-component"
   ],
-  "SelectedNode": "\\src\\styles.css",
+  "SelectedNode": "\\src\\index.html",
   "PreviewInSolutionExplorer": false
 }
