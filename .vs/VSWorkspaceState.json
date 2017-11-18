@@ -9,12 +9,7 @@
     "\\src\\app\\csspage",
     "\\src\\app\\csspage\\css-page-component",
     "\\src\\app\\home",
-    "\\src\\app\\home\\homepage",
-    "\\src\\app\\htmlpage",
-    "\\src\\app\\htmlpage\\html-component",
-    "\\src\\app\\htmlpage\\html-component\\doc-typepage",
-    "\\src\\app\\javascriptpage",
-    "\\src\\app\\javascriptpage\\javascript-page-component"
+    "\\src\\app\\home\\homepage"
   ],
   "SelectedNode": "\\src\\index.html",
   "PreviewInSolutionExplorer": false

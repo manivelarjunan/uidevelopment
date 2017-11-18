@@ -2,27 +2,199 @@
   <fieldset>
     <legend>Data binding:</legend>
 
-
     <div>
       <b>What is data binding?</b>
-      <p>
-        Display data by binding controls in an HTML template to properties of an Angular component.
-      </p>
-      <b>There are four types of data bindings:-</b>
-
-      <ul class="list">
-        <li>String interpolation</li>
-        <li>Two way data binding</li>
-        <li>Property Binding</li>
-        <li>Event Binding</li>
+      <ul>
+        <li>Display data by binding controls in an HTML template to properties of an Angular component.</li>
+        <li>Data binding is a mechanism for coordinating what users see, with application data values. While you could push values to and pull values from HTML, the application is easier to write, read, and maintain if you turn these chores over to a binding framework.</li>
+        <li>You simply declare bindings between binding sources and target HTML elements and let the framework do the work.</li>
       </ul>
+      <b>There are four types of data bindings:-</b>
+ 
+      <table class="table table-striped">
+        <tbody>
+          <tr>
+            <th>Types</th>
+            <th>Syntax</th>
+          </tr>
+          <tr>
+            <td>
+              String intepolation
+            </td>
+            <td>{{'{{'}} userName {{'}'}}{{'}'}}</td>
+          </tr>
+          <tr>
+            <td>
+              Proprty binding
+            </td>
+            <td>[target]="expression"</td>
+          </tr>
+          <tr>
+            <td>
+              Event binding
+            </td>
+            <td>(event)="statement"</td>
+          </tr>
+          <tr>
+            <td>
+             Two way data binding;
+            </td>
+            <td>[(ngModel)]="expression"</td>
+          </tr>
+        </tbody>
+      </table>
+      <br />
+      <!-- String interpolation starts here-->
+      <div>
+        <b>String interpolation (or) one way data binding ( {{'{{'}}  {{'}'}}{{'}'}} ):</b>
+        <hr />
 
+        <p>
+          The easiest way to display a component property
+          is to bind the property name through interpolation.
+          With interpolation, you put the property name in the view template, enclosed in double curly braces:.
+        </p>
+        <pre>{{'{{'}} userName {{'}'}}{{'}'}}</pre>
+
+        <br />
+
+        <div class="example">Example:</div>
+        <br />
+
+<pre>import {{'{'}}Component{{'}'}} from '@angular/core';
+    @Component({{'{'}}
+    selector:'my-app',
+    template : `
+        <span>&lt;p&gt;{{'{{'}} userName {{'}'}}{{'}'}}&lt;/p&gt;</span>
+        <span> // John</span>
+        <span>&lt;p&gt;{{'{{'}} 2 + 5 {{'}'}}{{'}'}}&lt;/p&gt;</span>
+        <span> // 7</span>'
+    {{'}'}})
+    export class firstComponent {{'{'}}
+        userName :string = 'John';
+    {{'}'}}
+</pre>
+        <br />
+      </div>
+      <!-- String interpolation ends here-->
+
+      <!-- Property binding starts here-->
+      <div>
+        <b>Property Binding ([]):</b>
+        <hr />
+
+        <p>
+          Write a template property binding to set a property of a view element. The binding sets the property to the value of a template expression.
+
+          The most common property binding sets an element property to a component property value. An example is binding the src property of an image element to a component's heroImageUrl property:
+          property binding as one-way data binding because it flows a value in one direction, from a component's data property into a target element property.
+          <br />
+          You cannot use property binding to pull values out of the target element. You can't bind to a property of the target element to read it. You can only set it.
+        </p>
+        <pre>&lt;img [src]="heroImageUrl"&gt;</pre>
+
+        <br />
+
+        <div class="example">Example:</div>
+        <br />
+
+<pre>import {{'{'}}Component{{'}'}} from '@angular/core';
+    @Component({{'{'}}
+    selector:'my-app',
+    template : `
+        <span>&lt;img [src]="heroImageUrl"&gt;</span>
+        <span>&lt;button [disabled]="flag"&gt;&lt;/button&gt;</span>
+        <span>&lt;div [ngClass]="someClassName"&gt;&lt;/div&gt;</span>
+    {{'}'}})
+    export class firstComponent {{'{'}}
+        src :string = './images/table.png';
+        flag: boolean = false;
+    {{'}'}}
+</pre>
+      </div>
+      <br />
+      <!-- Property binding ends here-->
+
+      <!-- Event binding starts here-->
+      <div>
+        <b>Event Binding (()):</b>
+        <hr />
+
+        <p>
+          Event binding syntax consists of a target event name within parentheses on the left of an equal sign, and a quoted template statement on the right. The following event binding listens for the button's click events, calling the component's onSave() method whenever a click occurs:<br />
+        </p>
+        <pre>&lt;button (click)="addCustomer()"&gt; Add Customer &lt;button&gt;</pre>
+
+        <br />
+
+        <div class="example">Example:</div>
+        <br />
+
+<pre>import {{'{'}}Component{{'}'}} from '@angular/core';
+    @Component({{'{'}}
+    selector:'my-app',
+    template : `
+        <span>&lt;input type="text" name="customer name" value ="mike" #customerName /&gt;</span>
+        <span>&lt;button (click)="updateCustomer(customerName)"&gt; Update Customer &lt;/button&gt;</span>
+        <span>&lt;p&gt;Customer Name: {{'{{'}} updatedCustomerName {{'}'}}{{'}'}} &lt;/p&gt;</span>
+         // (initial name) Customer Name:John
+         // (after the event) Customer Name:mike
+    {{'}'}})
+    export class firstComponent {{'{'}}
+        customerName : string = 'John';
+        addCustomer(customerName:string){{'{'}}
+            updatedCustomerName = customerName;
+         {{'}'}}
+    {{'}'}}
+</pre>
+      </div>
+      <br />
+      <!-- Event binding ends here-->
+
+      <!-- Two way binding starts here-->
+      <div>
+        <b>Two way data binding([()]):</b>
+        <hr />
+
+        <p>
+          Event binding syntax consists of a target event name within parentheses on the left of an equal sign, and a quoted template statement on the right. The following event binding listens for the button's click events, calling the component's onSave() method whenever a click occurs:<br />
+        </p>
+        <pre>&lt;button (click)="addCustomer()"&gt; Add Customer &lt;/button&gt;</pre>
+
+        <br />
+
+        <div class="example">Example:</div>
+        <br />
+
+<pre>import {{'{'}}Component{{'}'}} from '@angular/core';
+    @Component({{'{'}}
+    selector:'my-app',
+    template : `
+        <span>&lt;p&gt;Customer Name: {{'{{'}} userName {{'}'}}{{'}'}} &lt;/p&gt;</span>
+        <span>&lt;input type="text" type = "text" value ="mike" [(ngModel)] = "userName" /&gt;</span>
+         // (initial name) Customer Name:John
+        // (As soon as user type customer name updated)  Customer Name:m | mi | mik | mike
+    {{'}'}})
+    export class firstComponent {{'{'}}
+          userName : string = 'John';
+    {{'}'}}
+</pre>
+      </div>
+      <!-- Two way binding ends here-->
     </div>
 
-    <div>
+    <br />
 
+    <br />
 
-    </div>
+    <strong>What you learnt?</strong>
+    <ul>
+      <li>String interpolation, event bindings and property bindings are one way data binding.</li>
+
+    </ul>
+
+    <a href="https://plnkr.co/edit/N1V6JU?p=preview"> Data binding plnkr</a>
+
 
   </fieldset>
 </div>
