@@ -2,15 +2,36 @@
 * {
   box-sizing: border-box;
  }
-
-.navbar {
+.home {
+  background-color: red;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
   overflow: hidden;
-  background-color: #333;
-  position: fixed;
-  top: 0;
-  width: 100%;
 }
 
+li {
+  float: left;
+}
+
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    border-color:white;
+    text-decoration: none;
+  }
+
+    li a:hover:not(.active) {
+      background-color: red;
+    }
+
+.active {
+  background-color:orangered;
+}
 .container-fluid {
   background-color: darkred;
 }
@@ -43,7 +64,7 @@ footer {
 .menu {
   float: left;
   width: 20%;
-  margin-top: 50px;
+  margin-top: -7px;
   text-align: center;
 }
 
