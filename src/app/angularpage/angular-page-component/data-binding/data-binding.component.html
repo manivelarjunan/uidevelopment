@@ -86,12 +86,12 @@
         <p>
           Write a template property binding to set a property of a view element. The binding sets the property to the value of a template expression.
 
-          The most common property binding sets an element property to a component property value. An example is binding the src property of an image element to a component's heroImageUrl property:
+          The most common property binding sets an element property to a component property value. An example is binding the src property of an image element to a component's recipeImageUrl property:
           property binding as one-way data binding because it flows a value in one direction, from a component's data property into a target element property.
           <br />
           You cannot use property binding to pull values out of the target element. You can't bind to a property of the target element to read it. You can only set it.
         </p>
-        <pre>&lt;img [src]="heroImageUrl"&gt;</pre>
+        <pre>&lt;img [src]="recipeImageUrl"&gt;</pre>
 
         <br />
 
@@ -121,7 +121,7 @@
         <hr />
 
         <p>
-          Event binding syntax consists of a target event name within parentheses on the left of an equal sign, and a quoted template statement on the right. The following event binding listens for the button's click events, calling the component's onSave() method whenever a click occurs:<br />
+          Event binding syntax consists of a target event name within parentheses on the left of an equal sign, and a quoted template statement on the right. The following event binding listens for the button's click events, calling the component's addCustomer() method whenever a click occurs:<br />
         </p>
         <pre>&lt;button (click)="addCustomer()"&gt; Add Customer &lt;button&gt;</pre>
 
@@ -157,7 +157,7 @@
         <hr />
 
         <p>
-          Event binding syntax consists of a target event name within parentheses on the left of an equal sign, and a quoted template statement on the right. The following event binding listens for the button's click events, calling the component's onSave() method whenever a click occurs:<br />
+          Event binding syntax consists of a target event name within parentheses on the left of an equal sign, and a quoted template statement on the right. The following event binding listens for the button's click events, calling the component's addCustomer() method whenever a click occurs:<br />
         </p>
         <pre>&lt;button (click)="addCustomer()"&gt; Add Customer &lt;/button&gt;</pre>
 

@@ -12,8 +12,10 @@ import { CssPageComponentComponent } from './csspage/css-page-component/css-page
 import { D3PageComponentComponent } from './d3page/d3-page-component/d3-page-component.component';
 import { HomepageComponent } from './home/homepage/homepage.component';
 import { DataBindingComponent } from './angularpage/angular-page-component/data-binding/data-binding.component';
+import { CreateAngularAppComponent } from './angularpage/angular-page-component/create-angular-app/create-angular-app.component';
 import { HtmlComponentComponent } from './htmlpage/html-component/html-component.component';
 import { DocTypepageComponent } from './htmlpage/html-Component/doc-typepage/doc-typepage.component';
+
 
 
 @NgModule({
@@ -26,7 +28,8 @@ import { DocTypepageComponent } from './htmlpage/html-Component/doc-typepage/doc
     HomepageComponent,
     DataBindingComponent,
     HtmlComponentComponent,
-    DocTypepageComponent
+    DocTypepageComponent,
+    CreateAngularAppComponent
 
   ],
   imports: [

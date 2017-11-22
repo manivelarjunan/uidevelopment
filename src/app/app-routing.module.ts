@@ -8,11 +8,14 @@ import { HomepageComponent } from './home/homepage/homepage.component';
 import { DataBindingComponent } from './angularpage/angular-page-component/data-binding/data-binding.component';
 import { HtmlComponentComponent } from './htmlpage/html-component/html-component.component';
 import { DocTypepageComponent } from './htmlpage/html-Component/doc-typepage/doc-typepage.component';
+import { CreateAngularAppComponent } from './angularpage/angular-page-component/create-angular-app/create-angular-app.component';
+
 
 const appRoutes: Routes = [
   { path: '', component: HomepageComponent },
   {
     path: 'Angular', component: AngularPageComponentComponent, children: [
+      { path: 'CreateAngular', component: CreateAngularAppComponent},
       { path: 'DataBinding', component: DataBindingComponent }
     ]
   },

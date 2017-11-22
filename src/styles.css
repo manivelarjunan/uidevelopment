@@ -74,7 +74,9 @@ ul li {
 .example {
   width: 100px;
   height: 20px;
-  background-color: forestgreen;
+  color: forestgreen;
+  border-bottom-color:yellow;
+  background-color: white;
   box-shadow: 5px 5px 5px #888888;
 }
 
