@@ -3,17 +3,14 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\angularpage",
     "\\src\\app\\angularpage\\angular-page-component",
     "\\src\\app\\angularpage\\angular-page-component\\create-angular-app",
     "\\src\\app\\angularpage\\angular-page-component\\data-binding",
-    "\\src\\app\\d3page",
+    "\\src\\app\\csspage\\css-page-component",
     "\\src\\app\\d3page\\d3-page-component",
     "\\src\\app\\home",
-    "\\src\\app\\home\\homepage",
-    "\\src\\app\\htmlpage",
-    "\\src\\app\\javascriptpage"
+    "\\src\\app\\javascriptpage\\javascript-page-component"
   ],
-  "SelectedNode": "\\src\\app\\home\\homepage\\homepage.component.html",
+  "SelectedNode": "\\src\\favicon.ico",
   "PreviewInSolutionExplorer": false
 }

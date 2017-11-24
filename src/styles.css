@@ -12,6 +12,11 @@ ul {
   overflow: hidden;
 }
 
+.externalLink {
+  border: 1px solid green;
+  background-color: black;
+  box-shadow: 5px 5px 5px #888888;
+}
 .bodyContent {
   overflow: auto;
   margin-top: 57px
@@ -64,9 +69,10 @@ li {
 }
 
 footer {
-  background-color: #e5e5e5;
+  background-color: black;
   text-align: center;
   padding: 10px;
+  color:antiquewhite;
   margin-top: 7px;
 }
 
