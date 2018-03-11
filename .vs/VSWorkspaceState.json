@@ -3,14 +3,8 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\angularpage\\angular-page-component",
-    "\\src\\app\\angularpage\\angular-page-component\\create-angular-app",
-    "\\src\\app\\angularpage\\angular-page-component\\data-binding",
-    "\\src\\app\\csspage\\css-page-component",
-    "\\src\\app\\d3page\\d3-page-component",
-    "\\src\\app\\home",
-    "\\src\\app\\javascriptpage\\javascript-page-component"
+    "\\src\\app\\home"
   ],
-  "SelectedNode": "\\src\\favicon.ico",
+  "SelectedNode": "\\src\\app\\app.component.ts",
   "PreviewInSolutionExplorer": false
 }

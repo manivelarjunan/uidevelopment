@@ -4,10 +4,23 @@ div p {
   font-family: Source Sans Pro,Helvetica Neue,Helvetica,Arial,sans-serif;
 }
 
-img {
+div > img {
   border-radius: 50%;
 }
 
+p > img {
+  padding: 5px 20px;
+  height:180px;
+  width:300px;
+  }
+
+.headingColor {
+  font-size: 20px;
+  font-weight: 500;
+  color: #1976d2;
+  margin-top: 10px;
+  text-transform: uppercase;
+}
 *, *:before, *:after {
   box-sizing: inherit;
 }
