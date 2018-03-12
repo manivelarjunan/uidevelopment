@@ -1,26 +1,20 @@
-<div style="overflow:auto">
+<div>
   <div class="menu">
-    <div class="menuitem">javascript</div>
+
+    <div class="menuitem" routerLinkActive="active"
+         [routerLinkActiveOptions]="{exact: true}">
+      <a routerLink="Promise"> Promise</a>
+    </div>
+   <!-- <div class="menuitem" routerLinkActive="active">
+      <a routerLink="DataBinding"> Data Binding </a>
+    </div>
+   -->
   </div>
 
   <div class="main">
-
-    <fieldset>
-      
-      <div>
-
-        <p>
-          <b>JavaScript (JS)</b> is a lightweight interpreted or JIT-compiled programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as node.js, Apache CouchDB and Adobe Acrobat. JavaScript is a prototype-based, multi-paradigm, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles. Read more about JavaScript.
-        </p>
-
-      </div>
-
-    </fieldset>
-
-
+    <router-outlet></router-outlet>
   </div>
   <div class="right">
     <h2></h2>
   </div>
 </div>
-

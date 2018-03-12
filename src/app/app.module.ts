@@ -15,6 +15,7 @@ import { DataBindingComponent } from './angularpage/angular-page-component/data-
 import { CreateAngularAppComponent } from './angularpage/angular-page-component/create-angular-app/create-angular-app.component';
 import { HtmlComponentComponent } from './htmlpage/html-component/html-component.component';
 import { DocTypepageComponent } from './htmlpage/html-Component/doc-typepage/doc-typepage.component';
+import { PromisePageComponentComponent } from './javascriptpage/javascript-page-component/promise-page-component/promise-page-component.component';
 
 
 
@@ -29,7 +30,8 @@ import { DocTypepageComponent } from './htmlpage/html-Component/doc-typepage/doc
     DataBindingComponent,
     HtmlComponentComponent,
     DocTypepageComponent,
-    CreateAngularAppComponent
+    CreateAngularAppComponent,
+    PromisePageComponentComponent
 
   ],
   imports: [

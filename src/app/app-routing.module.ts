@@ -9,13 +9,15 @@ import { DataBindingComponent } from './angularpage/angular-page-component/data-
 import { HtmlComponentComponent } from './htmlpage/html-component/html-component.component';
 import { DocTypepageComponent } from './htmlpage/html-Component/doc-typepage/doc-typepage.component';
 import { CreateAngularAppComponent } from './angularpage/angular-page-component/create-angular-app/create-angular-app.component';
+import { PromisePageComponentComponent } from './javascriptpage/javascript-page-component/promise-page-component/promise-page-component.component';
+
 
 
 const appRoutes: Routes = [
   { path: '', component: HomepageComponent },
   {
     path: 'Angular', component: AngularPageComponentComponent, children: [
-      { path: 'CreateAngular', component: CreateAngularAppComponent},
+      { path: 'CreateAngular', component: CreateAngularAppComponent },
       { path: 'DataBinding', component: DataBindingComponent }
     ]
   },
@@ -25,7 +27,11 @@ const appRoutes: Routes = [
       { path: 'doctype', component: DocTypepageComponent }
     ]
   },
-  { path: 'Javascript', component: JavascriptPageComponentComponent },
+  {
+    path: 'Javascript', component: JavascriptPageComponentComponent, children: [
+      { path: 'Promise', component: PromisePageComponentComponent },
+     ]
+      },
   { path: 'Css', component: CssPageComponentComponent },
   { path: 'D3', component: D3PageComponentComponent },
 
